@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    cursor: url(assets/meme-pop-cat-pointer.png), auto;
+  }
+
+.container {
+    text-align: center;
+  }
+
+h1 {
+    position: relative;
+    text-align: center;
+    color: #c0bcbc;
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+button {
+    margin: 20px;
+  }
+
+img {
+  position: absolute;
+}
+
+.cstm-btn {
+    width: 130px;
+    height: 40px;
+    color: #f5ecec;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: url(assets/meme-pop-cat-pointer.png), auto;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+.btn-yes {
+    background: #549972;
+    border: none;
+    z-index: 1;
+  }
+
+.btn-yes:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #b9a0c7;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+
+.btn-yes:hover {
+    color: #fff;
+  }
+
+.btn-yes:hover:after {
+    left: 0;
+    width: 100%;
+  }
+
+.btn-yes:active {
+    top: 2px;
+  }
+
+.btn-no {
+    background: #99545f;
+    border: none;
+    z-index: 1;
+  }
+  
+.btn-no:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #b9a0c7;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+      7px 7px 20px 0px rgba(0, 0, 0, .1),
+      4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+  }
+  
+.btn-no:hover {
+    color: #fff;
+  }
+  
+.btn-no:hover:after {
+    width: 100%;
+  }
+  
+.btn-no:active {
+    top: 2px;
+  }
+
+
+  

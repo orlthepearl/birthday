@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 20th Birthday</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+      body{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        background: 
+        radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+        radial-gradient(circle closest-side at 40% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 60% 22%, #373737 45%, rgba(221,51,85,0) 46%),
+        radial-gradient(circle closest-side at 50% 35%, #373737 30%, rgba(221,51,85,0) 31%),
+
+        radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+        radial-gradient(circle closest-side at 40% 22%, #444141 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 60% 22%, #444141 45%, rgba(221,51,85,0) 46%) 50px 50px,
+        radial-gradient(circle closest-side at 50% 35%, #444141 30%, rgba(221,51,85,0) 31%) 50px 50px;
+        
+        background-color:#323232;
+        background-size:100px 100px;
+        font-family: 'Lato', sans-serif;
+      }
+  </style>
+</head>
+<body>
+  
+  <img class="cat0" style="display: none; top: 2rem; left: 2rem; width: 15rem; height: 15rem; rotate: -30deg;" src="" alt="">
+  <img class="cat1" style="display: none; top: 5rem; left: 30rem; width: 15rem; height: 15rem; rotate: -30deg;" src="" alt="">
+  <img class="cat2" style="display: none; top: 15rem; left: 80rem; width: 15rem; height: 15rem; rotate: -30deg;" src="" alt="">
+  <img class="cat3" style="display: none; top: 40rem; left: 10rem; width: 15rem; height: 15rem; rotate: -30deg;" src="" alt="">
+  <img class="cat4" style="display: none; top: 40rem; left: 90rem; width: 15rem; height: 15rem; rotate: -30deg;" src="" alt="">
+  <div class="container">
+    <img class="mainPic" src="assets/turtle.jpg" style="position: relative; width: 25rem; height: 25rem;" alt="">
+    <h1 class="message">Will you be My Valentine?</h1>
+    <div class="buttons">
+      <button class="cstm-btn btn-yes" onclick="answerYes()">Yes</button>
+      <button class="cstm-btn btn-no" onclick="answerNo()">No</button>
+    </div>
+  </div>
+
+  <script>
+    var state = 0;
+    var textList = [
+      "Are you sure?",
+      "Pookie please.",
+      "don't do this to me :(",
+      "You're breaking my heart..",
+      "I'm gonna cry.."
+    ];
+
+    var images = [
+      "assets/cat1.jpg",
+      "assets/cat2.jpg",
+      "assets/cat3.jpg",
+      "assets/cat4.jpg",
+      "assets/cat5.jpg"
+    ];
+
+    function answerYes(){
+      var msg = document.querySelector('.message');
+      var no = document.querySelector('.btn-no');
+      var main = document.querySelector('.mainPic');
+      var show1 = document.querySelector('.' + 'cat0');
+      var show2 = document.querySelector('.' + 'cat1');
+      var show3 = document.querySelector('.' + 'cat2');
+      var show4 = document.querySelector('.' + 'cat3');
+      var show5 = document.querySelector('.' + 'cat4  ');
+      no.style.display = 'none';
+      show1.style.display = 'none';
+      show2.style.display = 'none';
+      show3.style.display = 'none';
+      show4.style.display = 'none';
+      show5.style.display = 'none';
+      msg.textContent = 'YAYYYYYY!!';
+      main.src = 'assets/catgif2.gif';
+    }
+
+    function answerNo() {
+      var msg = document.querySelector('.message');
+      var img = document.querySelector('.pics');
+      
+      if(state < 5){
+        var name = "cat" + state;
+        var show = document.querySelector('.' + name);
+        show.src = images[state];
+        show.style.display = 'block';
+      }else{
+        var no = document.querySelector('.btn-no');
+        no.style.display = 'none';
+      }
+
+      msg.textContent = textList[state];
+      state++;
+    }
+  </script>
+
+</body>
+</html>
